@@ -4,7 +4,7 @@ timestamp,language,problem
 2025-11-08 10:25:12,Kotlin,Segmentation fault (core dumped)
 2025-11-08 10:30:05,Kotlin,Uncaught ReferenceError: x is not defined
 2025-11-08 10:33:41,Kotlin,borrowed value does not live long enough
-2025-11-08 10:40:29,Kotlin,invalid memory address or nil pointer dereference
+2025-11-08 10:40:29,Kotlin,Hello
 2025-11-08 10:44:11,PHP,Undefined variable: user
 2025-11-08 10:50:57,Swift,Fatal error: Unexpectedly found nil while unwrapping an Optional value
 2025-11-08 10:55:30,R,object 'df' not found
