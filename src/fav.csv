@@ -1,0 +1,13 @@
+timestamp,language,problem
+2025-11-08 10:15:23,Python,TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2025-11-08 10:18:47,Java,NullPointerException at line 42
+2025-11-08 10:25:12,C++,Segmentation fault (core dumped)
+2025-11-08 10:30:05,JavaScript,Uncaught ReferenceError: x is not defined
+2025-11-08 10:33:41,Rust,borrowed value does not live long enough
+2025-11-08 10:40:29,Go,invalid memory address or nil pointer dereference
+2025-11-08 10:44:11,PHP,Undefined variable: user
+2025-11-08 10:50:57,Swift,Fatal error: Unexpectedly found nil while unwrapping an Optional value
+2025-11-08 10:55:30,R,object 'df' not found
+2025-11-08 11:00:22,Kotlin,Unresolved reference: result
+2025-11-08 11:05:49,C#,IndexOutOfRangeException: Index was outside the bounds of the array
+2025-11-08 11:10:00,TypeScript,Property 'map' does not exist on type 'undefined'
