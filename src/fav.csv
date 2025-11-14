@@ -7,7 +7,7 @@ timestamp,language,problem
 2025-11-08 10:40:29,Kotlin,Hello
 2025-11-08 10:44:11,PHP,Undefined variable: user
 2025-11-08 10:50:57,Swift,Fatal error: Unexpectedly found nil while unwrapping an Optional value
-2025-11-08 10:55:30,R,object 'df' not found
+2025-11-08 10:55:30,R,fiftyville
 2025-11-08 11:00:22,Kotlin,Unresolved reference: result
 2025-11-08 11:05:49,Kotlin,IndexOutOfRangeException: Index was outside the bounds of the array
-2025-11-08 11:10:00,Kotlin,Property 'map' does not exist on type 'undefined'
+,Kotlin,Property 'map' does not exist on type 'SQL'
