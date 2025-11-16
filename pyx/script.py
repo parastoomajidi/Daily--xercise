@@ -1,67 +1,134 @@
-class User :
-    def __init__(self, username, email, password):
+
+#static atteributes
+
+class User:
+    user_count = 0
+
+
+
+    def __init(self, username, email):
         self.username = username
         self.email = email
-        self.password = password
+        User.user_count += 1
 
-    def hi(self, user): 
-        print(f"Sending message to {user.username}: Hi {user.username},its {self.username}")
+    def display_user(self):
+        print(f"username: {self.username}, email: {self.email}")
 
 
-# p = Hi("username", "user@gmail.com", "***")
-# User.hi()
+user1 = User("parastoo", "p@gmail.com")
+user2 = User("sara", "s@gmail.com")
 
-user1 = User("paratsoo", "pst@gmail.com", "***")
-user2 = User("weeda", "weeda@gmail.com", "123")
-
-user1.hi(user2)
-
+print(User.user_count)
+print(user2.user_count)
+print(user2.user_count)
 
 
 
-# //////////////////////////////////////////////////////////
-
-# class Person :
-#     def __init__(self, name, age):
-#         self.name = name
-#         self.age = age
-
-#     def greet(self):
-#         print(f"hi, my name is {self.name} and {self.age} years old")
-
-# person1 = Person("parastoo", 26)
-# person1.greet()
-
-# person2 = Person("Bob", 77)
-# person2.greet()
-
-# //////////////////////////////////////////////////////////
-
-# class Dog:
-#     def __init__(self, namex,breedx, owner):
-#         self.name = namex
-#         self.breed = breedx
-#         self.owner = owner
-
-#     def bark (self):
-#         print("whoof whoof")
 
 
-# class Owner:
-#     def __init__(self, nameq, addressq, contactq):
-#         self.name = nameq
-#         self.address = addressq
-#         self.phone_num = contactq
 
 
-# owner1 = Owner( "Denny", "122 s div", "88-99")
-# dog1 = Dog("kiki", "Iranian", owner1)
-# print(dog1.owner.name)
 
-# owner2 = Owner("p1", "44 e av", "77-66")
-# dog2 =Dog("psto", "German", owner2)
-# print(dog2.owner.name)
 
-# owner3 = Owner("namMe", "AddressMe", "ContactMe")
-# dog3 = Dog("test1", "BreedMe", owner3)
-# print(dog3.owner.address)
+
+
+
+
+# ///////////////////////////////////////////////////////////
+# class User :
+#     def __init__(self, username, email, password):
+#         self.username = username
+#         self._email = email
+#         self.password = password
+
+#     @property
+#     def email(self):
+#         print("Email accessed")
+#         return self._email
+
+# # sett property
+#     @email.setter
+#     def email(self, new_emailx):
+#         if "@" in new_emailx:
+#              self._email = new_emailx
+
+
+    
+
+#     # def get_email(self):
+#     #     return self._email
+    
+#     # def set_email(self, new_email):
+#     #     if "@" in new_email:
+#     #         self._email = new_email
+#     #     self._email 
+
+        
+# user1 = User("paratsoo", " pst@gmail.com", "***")
+# print(user1.email)
+
+
+
+#     # def get_email(self):
+#     #     return self._email
+#     # def clean_email(self):
+#     #     return self._email.lower().strip()
+
+#     # def hi(self, user): 
+#     #     print(f"Sending message to {user.username}: Hi {user.username},its {self.username}")
+
+# # print(user1._email)
+# # print(user1.clean_email())
+
+# # print(user1._email)
+# # user1.email="tedr"
+# # print(user1.eamil)
+# # user2 = User("weeda", "weeda@gmail.com", "123")
+# # user1.hi(user2)
+
+# # //////////////////////////////////////////////////////////
+
+# # class Person :
+# #     def __init__(self, name, age):
+# #         self.name = name
+# #         self.age = age
+
+# #     def greet(self):
+# #         print(f"hi, my name is {self.name} and {self.age} years old")
+
+# # person1 = Person("parastoo", 26)
+# # person1.greet()
+
+# # person2 = Person("Bob", 77)
+# # person2.greet()
+
+# # //////////////////////////////////////////////////////////
+
+# # class Dog:
+# #     def __init__(self, namex,breedx, owner):
+# #         self.name = namex
+# #         self.breed = breedx
+# #         self.owner = owner
+
+# #     def bark (self):
+# #         print("whoof whoof")
+
+
+# # class Owner:
+# #     def __init__(self, nameq, addressq, contactq):
+# #         self.name = nameq
+# #         self.address = addressq
+# #         self.phone_num = contactq
+
+
+# # owner1 = Owner( "Denny", "122 s div", "88-99")
+# # dog1 = Dog("kiki", "Iranian", owner1)
+# # print(dog1.owner.name)
+
+# # owner2 = Owner("p1", "44 e av", "77-66")
+# # dog2 =Dog("psto", "German", owner2)
+# # print(dog2.owner.name)
+
+# # owner3 = Owner("namMe", "AddressMe", "ContactMe")
+# # dog3 = Dog("test1", "BreedMe", owner3)
+# # print(dog3.owner.address)
