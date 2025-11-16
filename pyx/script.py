@@ -1,37 +1,65 @@
+# #static vs. instance method example 
 
-#static atteributes
+class BankAccount:
+    MIN_BALANCE = 100
 
-class User:
-    user_count = 0
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        # here we create the protectetd balance
+        self._balance = balance
 
-
-
-    def __init(self, username, email):
-        self.username = username
-        self.email = email
-        User.user_count += 1
-
-    def display_user(self):
-        print(f"username: {self.username}, email: {self.email}")
-
-
-user1 = User("parastoo", "p@gmail.com")
-user2 = User("sara", "s@gmail.com")
-
-print(User.user_count)
-print(user2.user_count)
-print(user2.user_count)
+    def deposit(self, amount):
+        if amount > 0:
+            self._balance += amount
+            print(f"{self.owner}'s newbalance ${self._balance}")
+        else:
+            print("charge your balance")
 
 
+    @staticmethod
+    def is_valid_interest_rate(rate):
+        return 0 <= rate <= 5
+    
 
+account = BankAccount("paratsoo", 500)
+account.deposit(10)
 
-
-
-
-
+print(BankAccount.is_valid_interest_rate(3))
+print(BankAccount.is_valid_interest_rate(10))
+        
 
 
 
+
+
+
+
+
+
+
+
+
+
+# ///////////////////////////////////////////////////////////
+
+# class User:
+#     user_count = 0
+
+#     def __init(self, username, email):
+#         self.username = username
+#         self.email = email
+#         User.user_count += 1
+
+#     def display_user(self):
+#         print(f"username: {self.username}, email: {self.email}")
+
+
+# user1 = User("parastoo", "p@gmail.com")
+# user2 = User("sara", "s@gmail.com")
+
+# print(User.user_count)
+# print(user2.user_count)
+# print(user2.user_count)
 
 
 # ///////////////////////////////////////////////////////////
