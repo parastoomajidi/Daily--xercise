@@ -1,31 +1,77 @@
-# #static vs. instance method example 
+#OOP Principles
+# Encapsulation
+
+class BadBankAccount:
+    def __init__(self, balanceq):
+        self.balance = balanceq
+
+
+account = BadBankAccount(0.0)
+account.balance = -1
+print(account.balance)
 
 class BankAccount:
-    MIN_BALANCE = 100
+    def __init__(self):
+        self._balance = 0.0
 
-    def __init__(self, owner, balance=0):
-        self.owner = owner
-        # here we create the protectetd balance
-        self._balance = balance
 
+    @property
+    def balance(self):
+        return self._balance
+    
     def deposit(self, amount):
-        if amount > 0:
-            self._balance += amount
-            print(f"{self.owner}'s newbalance ${self._balance}")
-        else:
-            print("charge your balance")
+        if amount <= 0:
+            raise ValueError("deposit amoun must e positive")
+        self._balance += amount
+
+    def withdraw (self, amouunt):
+        if amouunt <= 0:
+            raise ValueError("withdraw amoun must e positive")
 
 
-    @staticmethod
-    def is_valid_interest_rate(rate):
-        return 0 <= rate <= 5
+
+        
+
+
+
+
+
+
+
+
+# #static vs. instance method example 
+# class BankAccount:
+#     MIN_BALANCE = 100
+
+#     def __init__(self, owner, balance=0):
+#         self.owner = owner
+#         # here we create the protectetd balance
+#         self._balance = balance
+
+#     def deposit(self, amount):
+#         if amount > 0:
+#             self._balance += amount
+#             print(f"{self.owner}'s newbalance ${self._balance}")
+#         else:
+#             print("charge your balance")
+
+#     def _is_valid_amount(self, amount):
+#         return amount > 0
+    
+#     def __log_transaction(self, trns_type, amount ):
+#         print(f"Logging {trns_type} of $ {amount}. new balance: $ {self._balance}")
+
+
+#     @staticmethod
+#     def is_valid_interest_rate(rate):
+#         return 0 <= rate <= 5
     
 
-account = BankAccount("paratsoo", 500)
-account.deposit(10)
+# account = BankAccount("paratsoo", 500)
+# account.deposit(10)
 
-print(BankAccount.is_valid_interest_rate(3))
-print(BankAccount.is_valid_interest_rate(10))
+# print(BankAccount.is_valid_interest_rate(3))
+# print(BankAccount.is_valid_interest_rate(10))
         
 
 
