@@ -24,14 +24,14 @@ class BankAcount :
         self._balance += amount
 
 
-    # draw the method
+    # withdraw the method
 
-    def withdraw (self, amount):
-        if amount <= 0:
+    def withdraw (self, amountl):
+        if amountl <= 0:
             raise ValueError("Deposit amount must be positive.")
-        if amount >= self._balance:
+        if amountl >= self._balance:
             raise ValueError ("Insufficient funds")
-        self._balance -= amount
+        self._balance -= amountl
 
 
 
